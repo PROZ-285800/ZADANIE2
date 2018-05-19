@@ -8,18 +8,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.WebSocketChatStageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/8.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.WebSocketChatStageController">
    <children>
       <Label layoutX="44.0" layoutY="73.0" text="User:" />
       <TextField fx:id="userTextField" layoutX="105.0" layoutY="68.0" prefHeight="27.0" prefWidth="339.0" />
       <Button fx:id="btnSet" layoutX="444.0" layoutY="68.0" mnemonicParsing="false" onAction="#btnSet_Click" text="Set" />
-      <TextArea fx:id="chatTextArea" disable="true" layoutX="105.0" layoutY="100.0" prefHeight="200.0" prefWidth="339.0" />
+      <TextArea fx:id="chatTextArea" disable="false" layoutX="105.0" layoutY="100.0" prefHeight="200.0" prefWidth="339.0" />
       <TextField fx:id="messageTextField" layoutX="105.0" layoutY="332.0" prefHeight="27.0" prefWidth="339.0" />
       <Label layoutX="27.0" layoutY="337.0" prefHeight="17.0" prefWidth="63.0" text="Message:" />
       <Button fx:id="btnSend" layoutX="445.0" layoutY="332.0" mnemonicParsing="false" onAction="#btnSend_Click" text="Send" />
-      <Button fx:id="btnUpload" layoutX="507.0" layoutY="332.0" mnemonicParsing="false" onAction="#btnUpload_Click" text="Upload file" />
-      <Text fx:id="attachmentInfo" layoutX="105.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="128.21875" />
-      <Button fx:id="btnRemove" layoutX="245.0" layoutY="364.0" mnemonicParsing="false" onAction="#btnRemove_Click" text="remove" textAlignment="CENTER" textFill="#f80000" />
-      <ListView fx:id="attachments" layoutX="458.0" layoutY="135.0" onMouseClicked="#downloadContent" prefHeight="165.0" prefWidth="128.0" />
+      <Button fx:id="btnUpload" layoutX="507.0" layoutY="332.0" mnemonicParsing="false" onAction="#btnUpload_Click" text="Send file" />
+      <ListView fx:id="fileNames" layoutX="458.0" layoutY="135.0" onMouseClicked="#downloadContent" prefHeight="165.0" prefWidth="300.0" />
    </children>
 </AnchorPane>

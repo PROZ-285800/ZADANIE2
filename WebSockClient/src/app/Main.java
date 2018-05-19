@@ -24,14 +24,13 @@ public class Main extends Application {
 				primaryStage.show();
 		} catch(Exception e) { 
 			e.printStackTrace();
-			}
+		}
 		
 	}
 	
 	private void primaryStage_Hiding(WindowEvent e, FXMLLoader fxmlLoader) {
 		((WebSocketChatStageController) fxmlLoader.getController())
 		.closeSession(new CloseReason(CloseCodes.NORMAL_CLOSURE, "Stage is hiding"));
-			
 	}
 	
 	public static void main(String[] args) {
